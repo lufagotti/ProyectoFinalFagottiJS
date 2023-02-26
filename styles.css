@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+.boton{
+    opacity: 0;
+}
+/* header */
+.navbar-collapse {
+justify-content: flex-end;
+}
+.img-fluid{
+    width: 2500px;
+}
+.btn-primary{
+    background-color: #9dcacc;
+    border-block-color: #9dcacc;
+    --bs-btn-border-color: #9dcacc;
+    --bs-btn-hover-bg: #789a9c;
+    --bs-btn-hover-border-color: #789a9c;
+}
+
+/* titulo */
+
+.titulo1{
+    font-size: 69px;
+    background-color: beige;
+    opacity: 0.8;
+    margin-right: 200px;
+    margin-left: 200px;
+} 
+.subtitulo{
+    background-color: beige;
+    opacity: 0.8;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.titulo2{
+    text-align: center;
+    background-color: #9dcacc;
+    font-size: 44px;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.banner{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url(../imagenes/rutina-de-skincare-mobile.jpg);
+}
+.banner-container{
+    text-align: center;
+    padding: 20% 0;
+}
+#titulo4{
+    background-color: #9dcacc;
+    font-size: 44px;
+    margin-bottom: 40px;
+}
+
+/* Productos section*/
+#contenedor-productos{
+    justify-items: center;
+}
+.card-img-top{
+    height: 285px;
+}
+.card{
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+/* Carrito */
+
+.modal-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.img-carrito{
+    width: 200px;
+    padding: 20px;
+}
+.precioTotal{
+    padding-right: 38px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+
+/* footer */
+.ms-3{
+    font-size: 25px;
+}
+.container{
+    margin-top: 50px;
+}
+/* Mediaqueries */
+@media only screen and (max-width:1200px){
+    #contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5vw;
+        justify-items: center;
+        margin-right: 25px;
+    }
+    .titulo1{
+        margin-top: 300px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .subtitulo{
+        font-size: 40px;
+        margin-right: 70px;
+        margin-left: 70px;
+    }
+}
+@media only screen and (min-width:1200px){
+    #contenedor{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        margin-right: 25px;
+    }
+}
+@media only screen and (max-width:600px){
+    #contenedor{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        margin-right: 20px;
+    }
+    .titulo1{
+        margin-left: 30px;
+        margin-top: 80px;
+        margin-right: 30px;
+    }
+    .subtitulo{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
