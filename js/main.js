@@ -1,4 +1,3 @@
-
 let carrito = [];
 
 const contenedor = document.querySelector ('#contenedor')
@@ -79,43 +78,6 @@ async function agregarProducto(id){
     })
     mostrarCarrito()
 }
-// fetch('/js/data.json')
-// .then((resp) => resp.json())
-// .then ((data) => {
-    // data.forEach((prod)=> {
-    //     const {id, nombre, precio, img} = prod
-    //     if(contenedor){
-    //     contenedor.innerHTML += `
-    //         <div class="card" style="width: 18rem;">
-    //         <img src=${img} class="card-img-top" alt="...">
-    //         <div class="card-body">
-    //             <h5 class="card-title">${nombre}</h5>
-    //             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    //             <p class="preciongr"> $ ${precio}</p>
-    //             <button onclick="agregarProducto(${id})"  type="button" class="btn btn-primary">Agregar al carrito</button>
-    //         </div>
-    //         </div>
-    //         `
-    //     }
-    // });
-// })
-
-// productos.forEach((prod)=> {
-//     const {id, nombre, precio, img} = prod
-//     if(contenedor){
-//     contenedor.innerHTML += `
-//         <div class="card" style="width: 18rem;">
-//         <img src=${img} class="card-img-top" alt="...">
-//         <div class="card-body">
-//             <h5 class="card-title">${nombre}</h5>
-//             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//             <p class="preciongr"> $ ${precio}</p>
-//             <button onclick="agregarProducto(${id})"  type="button" class="btn btn-primary">Agregar al carrito</button>
-//         </div>
-//         </div>
-//         `
-//     }
-// });
 
 if(procesarCompra){
 procesarCompra.addEventListener('click', () => {
@@ -139,28 +101,6 @@ vaciarCarrito.addEventListener('click', () => {
     mostrarCarrito()
 })
 }
-
-// function agregarProducto(id){
-//     const existe = carrito.some(prod => prod.id === id)
-//     if (existe){
-//     const prod = carrito.map (prod =>{
-//         if (prod.id === id){
-//         prod.cantidad++
-//         }
-//     })
-//     }else{
-//     const item = productos.find ((prod) => prod.id === id)
-//     carrito.push(item)
-//     }
-//     Swal.fire({
-//     position: 'center',
-//     icon: 'success',
-//     title: 'Se agrego al carrito',
-//     showConfirmButton: false,
-//     timer: 1000
-//     })
-//     mostrarCarrito()
-// // }
 
 const mostrarCarrito = () => {
     const modalBody = document.querySelector ('.modal .modal-body')
@@ -255,7 +195,7 @@ function enviarCompra(e){
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
             btn.value = 'Finalizar compra';
-          // alert('Enviado!');
+        //   alert('Enviado!');
         }, (err) => {
             btn.value = 'Finalizar compra';
             alert(JSON.stringify(err));
