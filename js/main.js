@@ -186,6 +186,8 @@ function enviarCompra(e){
     // document.getElementById('form')
     // .addEventListener('submit', function(event) {
     // event.preventDefault();
+
+        btn.value = 'Enviando...';
     
     btn.value = 'Enviando...';
     
@@ -205,18 +207,18 @@ function enviarCompra(e){
         const spinner = document.querySelector ('#spinner')
         spinner.classList.add('d-flex')
         spinner.classList.remove('d-none')
-  
+    
         setTimeout(() => {
         spinner.classList.remove('d-flex')
         spinner.classList.add('d-none')
         formulario.reset()
         }, 3000)
-  
+    
         const alertExito = document.createElement('p')
         alertExito.classList.add('alert', 'd-block', 'text-center', 'col-md-12', 'mt-2', 'alert-success')
         alertExito.textContent = "Compra realizada correctamente"
         formulario.appendChild(alertExito)
-  
+    
         setTimeout(() => {
         alertExito.remove()
         }, 3000)

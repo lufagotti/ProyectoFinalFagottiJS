@@ -7,6 +7,9 @@
 .boton{
     opacity: 0;
 }
+.boton-eliminar{
+    border:none;
+}
 /* header */
 .navbar-collapse {
 justify-content: flex-end;
@@ -52,7 +55,7 @@ justify-content: flex-end;
     background-position: center;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url(../imagenes/rutina-de-skincare-mobile.jpg);
+    url(./imagenes/rutina-de-skincare-mobile.jpg);
 }
 .banner-container{
     text-align: center;
